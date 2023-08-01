@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+	<html lang="en">
+ 
+	<head>
+	    <link href="/app/img/plm_seal_2014_optipng.png" rel="icon" type="image/png">
+    <link href="/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/fontawesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+    <link href="/adminlte/2.3.8/css/AdminLTE.min.css" rel="stylesheet">
+    <link href="/adminlte/2.3.8/css/skins/skin-purple.min.css" rel="stylesheet">
+    <link href="/app/css/iNTEGRiTY-Global.css" rel="stylesheet">
+    <script src="/jquery/3.1.1/js/jquery.min.js"></script>
+    <script defer src="/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script defer src="/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script defer src="/select2/4.0.3/js/select2.min.js"></script>
+	</head>
+ 
+	<body class="bg-light">
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient" id="topNavBar">
+	        <div class="container">
+	            <a class="navbar-brand" href="https://sourcecodester.com">
+	            Sourcecodester
+	            </a>
+	        </div>
+	    </nav>
+	    <div class="container py-3" id="page-container">
+	        <small>How to create a dynamic confirmation dialog or modal using jQuery</small>
+	        <hr>
+	        <div id="printables">
+	            <div class="to_print" id="first_element">
+	                <h3><b>Dummy Data</b></h3>
+	                <hr>
+	                <button class="btn btn-sm btn-success float-end rounded-0 my-2" type="button" id="empty-table">Empty Table</button>
+	                <table class="table table-bordered table-striped" id="dummy-tbl">
+	                    <thead>
+	                        <tr class="bg-primary bg-gradient text-white">
+	                            <th class="text-capitalize text-center py-1 px-2">name</th>
+	                            <th class="text-capitalize text-center py-1 px-2">phone</th>
+	                            <th class="text-capitalize text-center py-1 px-2">email</th>
+	                            <th class="text-capitalize text-center py-1 px-2">address</th>
+	                            <th class="text-capitalize text-center py-1 px-2">region</th>
+	                            <th class="text-capitalize text-center py-1 px-2">text</th>
+	                            <th class="text-capitalize text-center py-1 px-2">action</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr data-id="1">
+	                            <td class="px-2 py-1">Caldwell Stewart</td>
+	                            <td class="px-2 py-1">(723) 398-8511</td>
+	                            <td class="px-2 py-1">sed.dolor.fusce@nulla.ca</td>
+	                            <td class="px-2 py-1">Ap #499-3016 Tincidunt St.</td>
+	                            <td class="px-2 py-1">Antwerpen</td>
+	                            <td class="px-2 py-1">Mauris vestibulum, neque sed dictum eleifend, nunc risus varius orci,</td>
+	                            <td class="px-2 py-1 text-center align-middle">
+	                                <button class="btn btn-danger btn-sm rounded-0 delete-data" type="button">Delete</button>
+	                            </td>
+	                        </tr>
+	                        <tr data-id="2">
+	                            <td class="px-2 py-1">Jesse Serrano</td>
+	                            <td class="px-2 py-1">(426) 346-7475</td>
+	                            <td class="px-2 py-1">natoque@sed.edu</td>
+	                            <td class="px-2 py-1">Ap #197-2368 Netus Rd.</td>
+	                            <td class="px-2 py-1">Nordrhein-Westphalen</td>
+	                            <td class="px-2 py-1">enim consequat purus. Maecenas libero est, congue a, aliquet vel,</td>
+	                            <td class="px-2 py-1 text-center align-middle">
+	                                <button class="btn btn-danger btn-sm rounded-0 delete-data" type="button">Delete</button>
+	                            </td>
+	                        </tr>
+	                        <tr data-id="3">
+	                            <td class="px-2 py-1">Shea Donovan</td>
+	                            <td class="px-2 py-1">1-512-856-0720</td>
+	                            <td class="px-2 py-1">ante@metusaliquam.edu</td>
+	                            <td class="px-2 py-1">429-7540 Nulla. Avenue</td>
+	                            <td class="px-2 py-1">British Columbia</td>
+	                            <td class="px-2 py-1">lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse</td>
+	                            <td class="px-2 py-1 text-center align-middle">
+	                                <button class="btn btn-danger btn-sm rounded-0 delete-data" type="button">Delete</button>
+	                            </td>
+	                        </tr>
+	                        <tr data-id="4">
+	                            <td class="px-2 py-1">Joshua Malone</td>
+	                            <td class="px-2 py-1">(784) 452-6346</td>
+	                            <td class="px-2 py-1">sed.libero.proin@malesuadaut.edu</td>
+	                            <td class="px-2 py-1">P.O. Box 461, 3954 Arcu. Street</td>
+	                            <td class="px-2 py-1">Michoacán</td>
+	                            <td class="px-2 py-1">laoreet ipsum. Curabitur consequat, lectus sit amet luctus vulputate, nisi</td>
+	                            <td class="px-2 py-1 text-center align-middle">
+	                                <button class="btn btn-danger btn-sm rounded-0 delete-data" type="button">Delete</button>
+	                            </td>
+	                        </tr>
+	                        <tr data-id="5">
+	                            <td class="px-2 py-1">Basia Haynes</td>
+	                            <td class="px-2 py-1">1-770-885-2056</td>
+	                            <td class="px-2 py-1">nulla@inscelerisque.ca</td>
+	                            <td class="px-2 py-1">Ap #187-2876 Phasellus Av.</td>
+	                            <td class="px-2 py-1">Henegouwen</td>
+	                            <td class="px-2 py-1">sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer</td>
+	                            <td class="px-2 py-1 text-center align-middle">
+	                                <button class="btn btn-danger btn-sm rounded-0 delete-data" type="button">Delete</button>
+	                            </td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+	            </div>
+	        </div>
+	    </div>
+ 
+	    <!-- Confirmation Modal -->
+	    <div class="modal fade" id="confimartionModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confimartionModalLabel" aria-hidden="true">
+	        <div class="modal-dialog modal-dialog-centered rounded-0">
+	            <div class="modal-content rounded-0">
+	                <div class="modal-header py-1">
+	                    <h5 class="modal-title" id="confimartionModalLabel"></h5>
+	                    <button type="button" style="font-size: .65em;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	                </div>
+	                <div class="modal-body rounded-0">
+ 
+	                </div>
+	                <div class="modal-footer py-1 rounded-0">
+	                    <button type="button" class="btn btn-primary btn-sm rounded-0 confirm-btn">Continue</button>
+	                    <button type="button" class="btn btn-secondary btn-sm rounded-0" data-bs-dismiss="modal">Close</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <!-- End of Confirmation Modal -->
+	</body>
+
+    <script>
+        // confirm dialog function
+        window.confirm_dialog = function($confirmation_title = '', $confirmation_html = '', $callback = '', $callback_param = []) {
+            // Confirmation Modal
+            var confirmation_modal = $('#confimartionModal')
+     
+            // Checking if modal exist on the current page
+            if (confirmation_modal.length <= 0) {
+                alert("Confimation Modal/Dialog does not exist in this page");
+                return false;
+            }
+     
+            // Display Confrimation title
+            confirmation_modal.find('#confimartionModalLabel').html($confirmation_title);
+            // Display Confrimation Content
+            confirmation_modal.find('.modal-body').html($confirmation_html);
+     
+            // Show Confirmation Modal
+            confirmation_modal.modal('show')
+     
+            // Execute Modal Callback when Continue Button is clicked
+            confirmation_modal.find('.confirm-btn').click(function() {
+                if ($callback != '') {
+                    // Checking if callback function exists
+                    if (typeof window[$callback] != 'function') {
+                        alert('Confimartion Dialog\'s Callback Function is undefined.')
+                    } else {
+     
+                        // Executing callback
+                        window[$callback]($callback_param);
+                    }
+                } else {
+                    alert('Confirmation Confirmed but no callback function stated')
+                }
+     
+                // Close Modal
+                confirmation_modal.modal('hide')
+     
+            })
+            return true;
+        }
+        window.sample_func = function() {
+            alert('Confirmed!')
+        }
+     
+        function delete_row(element) {
+            action = new Promise(resolve => {
+                element.hide('slow')
+                resolve()
+            })
+            action.then(() => {
+                element.remove();
+            })
+        }
+     
+        function empty_table() {
+            $('#dummy-tbl tbody').html('<tr><th colspan="7" class="text-center">No Data Listed</th></tr>')
+        }
+     
+        $(function() {
+            $('.delete-data').click(function() {
+                var tr = $(this).closest('tr')
+                var name = tr.find('td:nth-child(1)').text()
+                confirm_dialog('Delete Confirmation', '<p>Are you sure to remove <b>' + name + '</b> from list?</p>', 'delete_row', tr)
+            })
+            $('#empty-table').click(function() {
+                confirm_dialog('Empty Table Confirmation', '<p>Are you sure to the table?</p>', 'empty_table')
+            })
+        })
+</script>
+</html>
