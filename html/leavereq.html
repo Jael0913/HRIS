@@ -8,14 +8,14 @@
     <meta content="iNTEGRiTY | PLM Human Resources Information System" name="description">
     <meta content="MiSAKACHi" name="author">
     <title>Leave Management System</title>
-    <link href="/app/img/plm_seal_2014_optipng.png" rel="icon" type="image/png">
-    <link href="/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/fontawesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css" rel="stylesheet">
-    <link href="/select2/4.0.3/css/select2.min.css" rel="stylesheet">
-    <link href="/adminlte/2.3.8/css/AdminLTE.min.css" rel="stylesheet">
-    <link href="/adminlte/2.3.8/css/skins/skin-purple.min.css" rel="stylesheet">
-    <link href="/app/css/iNTEGRiTY-Global.css" rel="stylesheet">
+    <link href="/css/app/img/plm_seal_2014_optipng.png" rel="icon" type="image/png">
+    <link href="/css/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/fontawesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="/css/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+    <link href="/css/adminlte/2.3.8/css/AdminLTE.min.css" rel="stylesheet">
+    <link href="/css/adminlte/2.3.8/css/skins/skin-purple.min.css" rel="stylesheet">
+    <link href="/css/app/css/iNTEGRiTY-Global.css" rel="stylesheet">
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
@@ -25,10 +25,10 @@
             <a class="sidebar-toggle" data-toggle="offcanvas" href="#" role="button"><span class="sr-only">Toggle navigation</span></a>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown user user-menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <img alt="User Image" class="user-image" src="/app/img/plm_seal_2014_optipng.png"> <span class="hidden-xs">Justine Louis Magpantay</span></a>
+                    <li class="dropdown user user-menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <img alt="User Image" class="user-image" src="/css/app/img/plm_seal_2014_optipng.png"> <span class="hidden-xs">Justine Louis Magpantay</span></a>
                         <ul class="dropdown-menu">
                             <li class="user-header">
-                                <img alt="User Image" class="img-circle" src="/app/img/plm_seal_2014_optipng.png">
+                                <img alt="User Image" class="img-circle" src="/css/app/img/plm_seal_2014_optipng.png">
                                 <p>Justine Louis Magpantay</small></p>
                             </li>
                             <li class="user-footer">
@@ -47,7 +47,7 @@
             <h2 class="sr-only">SIDEBAR NAVIGATION</h2>
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img alt="User Image" class="img-circle" src="/app/img/plm_seal_2014_optipng.png">
+                    <img alt="User Image" class="img-circle" src="/css/app/img/plm_seal_2014_optipng.png">
                 </div>
                 <div class="pull-left info">
                     <p>Justine Louis Magpantay</p>
@@ -170,11 +170,11 @@
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
-                Leave Credits Computer
+                New Leave Request
             </h1>
             <ol class="breadcrumb">
                 <li>
-                    <a href="#"><i class="fa fa-cog"></i> Leave Credits Computer</a>
+                    <a href="#"><i class="fa fa-cog"></i> New Leave Request</a>
                 </li>
             </ol>
         </section>
@@ -193,7 +193,8 @@
                 </div>  
                         <div class="row">
                             <br>
-                            <div class="col-xs-8">
+                            <div class="col-xs-7">
+                                <input class="form-control" placeholder="ENTER TRACKING NUMBER" type="text"><br>
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <input class="form-control" placeholder="EMPLOYEE FIRST NAME" type="text">
@@ -213,28 +214,34 @@
                                             <button class="btn btn-warning btn-flat action-button" onclick=""><i class="fa fa-search"></i></button>
                                         </div>
                                     </div>
-                                    <h5>NUMBER OF DAYS PRESENT:</h5>
+                                    <h5>TYPE OF LEAVE:</h5>
                                     <select class="form-control">
-                                        <option>30.00</option>
-                                        <option>29.50</option>
-                                        <option>29.00</option>
+                                        <option>--Default--</option>
+                                        <option>Vacation Leave</option>
+                                        <option>Mandatory/Forced Leave</option>
+                                        <option>Sick Leave</option>
+                                        <option>Maternity Leave</option>
+                                        <option>Paternity Leave</option>
+                                        <option>Special Privilege Leave</option>
+                                        <option>Solo Parent Leave</option>
+                                        <option>Study Leave</option>
+                                        <option>10-Day VAWC Leave</option>
+                                        <option>Rehabilitation Privilege</option>
+                                        <option>Special Leave Benefits for Women</option>
+                                        <option>Special Emergency (Calamity) Leave</option>
+                                        <option>Adaption Leave</option>
                                     </select>
-                                    <br><h5>NUMBER OF HOUR/S LATE:</h5>
-                                    <select class="form-control">
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                    </select>
-                                    <br><h5>NUMBER OF MINUTE/S LATE:</h5>
-                                    <select class="form-control">
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                    </select>
+                                    <br><input class="form-control" placeholder="NUMBER OF DAYS REQUESTED" type="text">
                                     <br><button class="btn btn-warning" onclick="" type="submit" id="submitButton">SUBMIT</button>
                             </div>
-                            <div class="col-xs">
-                                <button class="btn btn-warning btn-flat action-button" onclick=""><i class="fa fa-search"></i></button>
+                            <div class="col-xs-1">
+                                <button class="btn btn-warning btn-flat action-button"><i class="fa fa-search"></i></button>
+                            </div>
+                            <div class="col-xs-5">
+                                <br>
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="sample.pdf"></iframe>
+                                </div>
                             </div>
                         </div>
                 </div>
@@ -261,7 +268,7 @@
                 </h5>
             </div>
             <div class="modal-body">
-                <h4>This will initialize leave accumulation, do you wish to continue?</h4>
+                <h4>This will initialize leave request, do you wish to continue?</h4>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-warning flat" id="cfnModalYesBtn" type="button"><i class="fa fa-check"></i> Yes</button>
@@ -272,11 +279,11 @@
 </div>
 <!-- Confirmation Modal End -->
 
-<script src="/jquery/3.1.1/js/jquery.min.js"></script>
-<script defer src="/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
-<script defer src="/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
-<script defer src="/select2/4.0.3/js/select2.min.js"></script>
+<script src="/css/jquery/3.1.1/js/jquery.min.js"></script>
+<script defer src="/css/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/css/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+<script defer src="/css/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+<script defer src="/css/select2/4.0.3/js/select2.min.js"></script>
 <script>
     /* Global Variables Section */
     let departmentsTable  = $( '#departmentsTable' ),
@@ -571,7 +578,7 @@
     
 
 </script>
-<script defer src="/adminlte/2.3.8/js/app.min.js"></script>
+<script defer src="/css/adminlte/2.3.8/js/app.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.1/fullcalendar.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <!-- <script>
