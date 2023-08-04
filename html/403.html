@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="HTML Tidy for HTML5 for Windows version 5.2.0" name="generator">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta content="iNTEGRiTY | PLM Human Resources Information System" name="description">
+    <meta content="MiSAKACHi" name="author">
+    <title>403 Forbidden | iNTEGRiTY</title>
+    <link href="/css/app/img/plm_seal_2014_optipng.png" rel="icon" type="image/png">
+    <link href="/css/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/fontawesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="/css/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+    <link href="/css/adminlte/2.3.8/css/AdminLTE.min.css" rel="stylesheet">
+    <link href="/css/adminlte/2.3.8/css/skins/skin-purple.min.css" rel="stylesheet">
+    <link href="/css/app/css/iNTEGRiTY-Global.css" rel="stylesheet">
+</head>
+<body class="hold-transition skin-purple sidebar-mini">
+<div class="wrapper">
+    <header class="main-header">
+        <a class="logo" href="main.html" target="_self"> <span class="logo-mini"><b>i</b>TG</span>  <span class="logo-lg"><b>i</b>NTEGRiTY</span></a>
+        <nav class="navbar navbar-static-top">
+            <a class="sidebar-toggle" data-toggle="offcanvas" href="#" role="button"><span class="sr-only">Toggle navigation</span></a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <img alt="User Image" class="user-image" src="/css/app/img/plm_seal_2014_optipng.png"> <span class="hidden-xs">Justine Louis Magpantay</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="user-header">
+                                <img alt="User Image" class="img-circle" src="/css/app/img/plm_seal_2014_optipng.png">
+                                <p>Justine Louis Magpantay</small></p>
+                            </li>
+                            <li class="user-footer">
+                                <div class="pull-right">
+                                    <a class="btn btn-default btn-flat" href="auth/logout">Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="main-sidebar">
+        <section class="sidebar" role="navigation">
+            <h2 class="sr-only">SIDEBAR NAVIGATION</h2>
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img alt="User Image" class="img-circle" src="/css/app/img/plm_seal_2014_optipng.png">
+                </div>
+                <div class="pull-left info">
+                    <p>Justine Louis Magpantay</p>
+                    <small class="text-sm"><i class="fa fa-star text-success"></i> Administrator</small>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="header">NAVIGATION</li>
+                <li class="@yield( 'dashboardMenu' )">
+                    <a href="main.html" target="_self"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                </li>
+                <li class="header">SELF SERVICE</li>
+                <li class="treeview @yield( 'myInformationMenu' )">
+                    <a href="#"><i class="fa fa-user text-red"></i> <span class="text-red">My Information</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                </li>
+                <li class="treeview @yield( 'myLeavesMenu' )">
+                    <a href="#"><i class="fa fa-calendar-check-o"></i>My Leaves</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                    <ul class="treeview-menu">
+                        <li class="@yield( 'myNewLeaveRequest' )">
+                            <a href="leaves/new"><i class="fa fa-circle-o"></i> New Leave Request</a>
+                        </li>
+                        <li class="@yield( 'myApprovedRequests' )">
+                            <a href="leaves/pending"><i class="fa fa-circle-o"></i> Approved Requests</a>
+                        </li>
+                        <li class="@yield( 'myCancelledRequests' )">
+                            <a href="leaves/approved"><i class="fa fa-circle-o"></i> Cancelled Requests</a>
+                        </li>
+                        <li class="@yield( 'myPendingRequests' )">
+                            <a href="leaves/cancelled"><i class="fa fa-circle-o"></i> Pending Requests</a>
+                        </li>
+                        <li class="@yield( 'myRejectedRequests' )">
+                            <a href="leaves/rejected"><i class="fa fa-circle-o"></i> Rejected Requests</a>
+                        </li>
+                        <li class="@yield( 'mySubordinateRequests' )">
+                            <a href="leaves/subordinate"><i class="fa fa-circle-o"></i> Subordinate Requests</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview @yield( 'myAttendanceMenu' )">
+                    <a href="#"><i class="fa fa-book text-red"></i> <span class="text-red">My Attendance</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                </li>
+                <li class="header">HRIS MODULES</li>
+                <!-- @can( 'accessPersonnelManagement', session( 'activeUser' ) ) -->
+                <li class="treeview @yield( 'personnelManagementMenu' )">
+                    <a href="#"><i class="fa fa-users "></i> <span>Personnel Management</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                    <ul class="treeview-menu">
+                        <!-- @can( 'addNewPersonnel', session( 'activeUser' ) ) -->
+                        <li class="@yield( 'pmAddNewPersonnel' )">
+                            <a href="personnel/add"><i class="fa fa-circle-o"></i> Add New Employee</a>
+                        </li>
+                        <!-- @endcan -->
+                        <!-- @can( 'viewPersonnelList', session( 'activeUser' ) ) -->
+                        <li class="@yield( 'pmViewPersonnelList' )">
+                            <a href="personnel/list"><i class="fa fa-circle-o"></i> View Employee List</a>
+                        </li>
+                        <!-- @endcan -->
+                    </ul>
+                </li>
+                <!-- @endcan -->
+                <li class="treeview @yield( 'myLeavesMenu' )">
+                    <a href="#"><i class="fa fa-calendar-check-o"></i>Leaves</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                    <ul class="treeview-menu">
+                        <li class="LeaveReq">
+                            <a href="leavereq.html" target="_self"><i class="fa fa-circle-o"></i>New Leave Request</a>
+                        </li>
+                         <li class="EmpList">
+                            <a href="emplist.html" target="_self"><i class="fa fa-circle-o"></i>Employee Leave List</a>
+                        </li>
+                        <li class="LeaveComputer">
+                            <a href="leavecomputer.html" target="_self"><i class="fa fa-circle-o"></i>Leave Credits Computer</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview @yield( 'talentAcquisitionMenu' )">
+                    <a href="#"><i class="fa fa-user-plus text-red"></i> <span class="text-red">Talent Acquisition</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                </li>
+                <!-- @can( 'accessTimeKeeping', session( 'activeUser' ) ) -->
+                <li class="treeview @yield( 'timeKeepingMenu' )">
+                    <a href="#"><i class="fa fa-clock-o"></i> <span>Time Keeping</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                    <ul class="treeview-menu">
+                        <li class="@yield( 'tkComputeDtr' )">
+                            <a href="https://dtr.icto.local/"> <!----><i class="fa fa-circle-o"></i> Compute Daily Time Record</a>
+                        </li>
+                        <li class="@yield( 'tkPrintDtr' )">
+                            <a href="timekeeping/dtr/print"><!----><i class="fa fa-circle-o"></i> Print Daily Time Record</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- @endcan -->
+                <li class="treeview @yield( 'payrollGenerationMenu' )">
+                    <a href="#"><i class="fa fa-money text-red"></i> <span class="text-red">Payroll Generation</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                </li>
+                <li class="header">UTILITIES</li>
+                <li class="treeview @yield( 'configurationMenu' )">
+                    <a href="#"><i class="fa fa-wrench"></i> <span>Configuration</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                    <ul class="treeview-menu">
+                        <li class="@yield( 'cfgDepartments' )">
+                            <a href="configuration/departments"><i class="fa fa-circle-o"></i> Departments</a>
+                        </li>
+                        <li class="@yield( 'cfgDesignationTitles' )">
+                            <a href="configuration/designationtitles"><i class="fa fa-circle-o"></i> Designation Titles</a>
+                        </li>
+                        <li class="@yield( 'cfgPlantillaItems' )">
+                            <a href="configuration/plantilla"><i class="fa fa-circle-o"></i> Plantilla Items</a>
+                        </li>
+                        <li class="@yield( 'cfgPositions' )">
+                            <a href="configuration/positions"><i class="fa fa-circle-o"></i> Positions</a>
+                        </li>
+                        <li class="@yield( 'cfgTenure' )">
+                            <a href="configuration/tenure"><i class="fa fa-circle-o"></i> Tenure</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview @yield( 'reportsGenerationMenu' )">
+                    <a href="#"><i class="fa fa-file text-red"></i> <span class="text-red">Reports Generation</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                403 Forbidden
+            </h1>
+        </section>
+        <section class="content" role="main">
+            <h2 class="sr-only">PAGE CONTENT</h2>
+            <div class="error-page">
+                <h2 class="headline text-purple">
+                    403
+                </h2>
+                <div class="error-content">
+                    <h3>
+                        <i class="fa fa-warning text-purple"></i> Oops! Access forbidden.
+                    </h3>
+                    <p>
+                        You have no permissions to access this module. If you believe that this is an error, contact the site administrator.
+                        For the meantime, please <a href="{{ env( 'HOST_SUBDIR', '' ) }}/dashboard">return to the dashboard</a>.
+                    </p>
+                    <!-- @if( isset( $errorMessage ) ) -->
+                    <h3>
+                        <i class="fa fa-info-circle text-purple"></i> Error Message
+                    </h3>
+                    <p>
+                        <!-- {{ $errorMessage }} -->
+                    </p>
+                    <!-- @endif -->
+                </div>
+            </div>
+
+<script src="/css/jquery/3.1.1/js/jquery.min.js"></script>
+<script defer src="/css/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/css/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+<script defer src="/css/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+<script defer src="/css/select2/4.0.3/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#accumsModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+
+            // Close the modal when the close button is clicked
+            $(this).find('#no').on('click', function() {
+                $('#accumsModal').modal('hide');
+            });
+        });
+    });
+</script>
+<script>
+$( document ).ready( function() {
+    submitButton.click( function() {
+        confirmationModal.modal( 'show' );
+    });
+    
+    cfnModalNoBtn.click( function() {
+        confirmationModal.modal( 'hide' );
+    });
+});
+</script>
+<script>
+    /* Global Variables Section */
+    let departmentsTable  = $( '#departmentsTable' ),
+        tableAddNewButton = $( '#tableAddNewButton' ),
+        confirmationModal = $( '#confirmationModal' ),
+        cfnModalYesBtn    = $( '#cfnModalYesBtn' ),
+        cfnModalNoBtn     = $( '#cfnModalNoBtn' ),
+        documentModal     = $( '.modal' ),
+        emCloseButton     = $( '#errorModalCloseBtn' ),
+        emRefreshButton   = $( '#errorModalRefreshBtn' ),
+        eMessageCallout   = $( '#errorMessageCallout' ),
+        errorModal        = $( '#errorModal' ),
+        formContainer     = $( '#formContainer' ),
+        formData          = null,
+        inputModal        = $( '#inputModal' ),
+        recordIdField     = $( '#recordId' ),
+        resetButton       = $( '#resetButton' ),
+        departmentsForm   = $( '#departmentsForm' ),
+        submitButton      = $( '#submitButton' ),
+        vErrorCallout     = $( '#validationErrorCallout' ),
+        departmentHead    = $( '#departmentHead' ),
+        departmentType    = $( '#departmentType' ),
+        isActive          = $( '#isActive' );
+
+    $( document ).ready( function() {
+
+        departmentsTable = departmentsTable.DataTable({
+            columns    : [
+
+                { orderable : false },
+                { orderable : false },
+                { orderable : false },
+                { orderable : false }
+            ],
+            paging     : true,
+            pagingType : 'simple_numbers'
+        });
+
+    });
+
+    $( document ).ready( function() {
+        // Initialize DataTable
+        departmentsTable = departmentsTable.DataTable({
+            columns    : [
+                { orderable : true },
+                { orderable : true },
+                { orderable : true },
+                { orderable : true },
+                { orderable : false }
+            ],
+            info       : true,
+            order      : [['1', 'asc']],
+            paging     : true,
+            pagingType : 'simple_numbers'
+        });
+
+        // Add searching to header and footer
+        departmentsTable.columns().every( function () {
+            let that = this;
+            $( this.header() ).find( 'input' ).on( 'keyup change', function () {
+                if ( that.search() !== this.value ) {
+                    that.search( this.value ).draw();
+                }
+            });
+            $( this.footer() ).find( 'input' ).on( 'keyup change', function () {
+                if ( that.search() !== this.value ) {
+                    that.search( this.value ).draw();
+                }
+            });
+        });
+
+        // Reposition controls
+        let dtInfoText       = $( 'div[id$=_info]' ),
+            dtLength         = $( 'div[id$=_length]' ),
+            dtPaginate       = $( 'div[id$=_paginate]' ),
+            dtSelectBox      = dtLength.find( 'select' ).detach(),
+            tableToolsInfo   = $( '#tableToolsInfo' ),
+            tableToolsLength = $( '#tableToolsLength' ),
+            tableToolsPaging = $( '#tableToolsPaging' );
+
+        // Move DataTables Controls to custom container
+        dtSelectBox.attr( 'id', 'customDtLength' );
+        dtSelectBox.appendTo( tableToolsLength );
+        dtPaginate.appendTo( tableToolsPaging );
+        dtInfoText.appendTo( tableToolsInfo );
+        dtLength.remove();
+
+        // Initialize custom page plugins
+        $( '#customDtLength' ).select2();
+        departmentHead.select2();
+        departmentType.select2();
+        isActive.select2();
+
+        // Register Event Listeners
+        resetButton.click( function() {
+            resetForm();
+        });
+        
+        submitButton.click( function() {
+            savePersonnelInfo();
+        });
+
+        tableAddNewButton.click( function() {
+            // Reset the Record ID
+            recordIdField.val( '' );
+
+            // Reset previous form contents
+            resetForm();
+
+            // Change the title
+            inputModal.find( '.modal-title' ).find( 'span' ).html( 'Add Departments' );
+
+            // :)
+            inputModal.modal( 'show' );
+        });
+    });
+
+    /* AJAX Engine Section - Handles the form submission */
+    function disableControls( flag ) {
+        formContainer.find( 'input' ).prop( 'disabled', flag );
+        formContainer.find( 'select' ).prop( 'disabled', flag );
+        formContainer.find( 'button' ).prop( 'disabled', flag );
+        submitButton.find( 'i' ).toggleClass( 'fa-save', !flag ).toggleClass( 'fa-spinner fa-spin', flag );
+    }
+
+    function resetErrorMessages() {
+        vErrorCallout.addClass( 'hidden' );
+        eMessageCallout.addClass( 'hidden' );
+        formContainer.find( 'div[id$=Container]' ).removeClass( 'has-error' );
+        formContainer.find( 'div[id$=ErrorMsg] > small' ).html( '' );
+        formContainer.find( 'div[id$=ErrorMsg]' ).addClass( 'hidden' );
+    }
+
+    function resetForm() {
+        resetErrorMessages();
+        departmentsForm.trigger( 'reset' );
+        departmentsForm.find( 'select' ).trigger( 'change' );
+    }
+
+    // AJAX Engine Template [Revision 0002] - Modal Form Submission
+    function savePersonnelInfo() {
+        // Serialize the form
+        formData = departmentsForm.serialize();
+
+        // Disable Form Controls
+        disableControls( true );
+
+        // Initiate a POST AJAX request
+        $.ajax({
+            async    : true,
+            cache    : true,
+            data     : formData,
+            dataType : 'json',
+            encode   : true,
+            headers  : {
+                'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+            },
+            type     : 'post',
+            url      : ''
+        }).done( function( data, status, xhr ) {
+            try {
+                let jsonData = JSON.parse( xhr.responseText );
+
+                // Reload page to reflect changes
+                if( jsonData.ajaxSuccess === true ) {
+                    location.reload( true );
+                } else if( typeof( jsonData.ajaxFailure ) === 'string' ) {
+                    showErrorMessageCallout( jsonData.ajaxFailure );
+                } else {
+                    showErrorMessageCallout( 'Request completed but an incorrect response was received.' );
+                }
+            } catch( errorException ) {
+                showErrorMessageCallout( 'Request succeeded but an unspecified error occurred.' );
+            }
+        }).fail( function( xhr, status, error ) {
+            try {
+                let jsonData = JSON.parse( xhr.responseText ),
+                    jsonKeys = Object.keys( jsonData );
+
+                if( jsonData.ajaxFailure === undefined ) {
+                    // Enable Form Controls
+                    disableControls( false );
+
+                    // Reset error messages
+                    resetErrorMessages();
+
+                    // Show error banner
+                    vErrorCallout.removeClass( 'hidden' );
+
+                    // Iterate through elements and highlight fields with error
+                    jsonKeys.forEach( function( keyName ) {
+                        $( '#' + keyName + 'Container' ).addClass( 'has-error' );
+                        $( '#' + keyName + 'ErrorMsg > small' ).html( jsonData[keyName] );
+                        $( '#' + keyName + 'ErrorMsg' ).removeClass( 'hidden' );
+                    });
+                } else if( typeof( jsonData.ajaxFailure ) === 'string' ) {
+                    showErrorMessageCallout( jsonData.ajaxFailure );
+                } else {
+                    showErrorMessageCallout( 'Request failed. Server sent an unknown response.' );
+                }
+            } catch( errorException ) {
+                showErrorMessageCallout( 'Request failed. Unable to parse server response.' );
+            }
+        });
+    }
+
+    function showErrorMessageCallout( message ) {
+        resetErrorMessages();
+        eMessageCallout.find( 'p' ).html( message );
+        eMessageCallout.removeClass( 'hidden' );
+        disableControls( false );
+    }
+
+    function showErrorModal( message ) {
+        // Hide all previously shown modal windows
+        documentModal.modal( 'hide' );
+
+        setTimeout( function() {
+            // Set the modal error message
+            errorModal.find( '.modal-body' ).html( message );
+
+            // Register Event Listeners
+            emCloseButton.click( function() {
+                errorModal.modal( 'hide' );
+                resetErrorMessages();
+                disableControls( false );
+            });
+
+            emRefreshButton.click( function() {
+                location.reload( true );
+            });
+
+            // Show the error modal
+            errorModal.modal( 'show' );
+        }, 1000 );
+
+        return false;
+    }
+
+    function fetchPersonnelInfo( recordId ) {
+        // Initiate a POST AJAX request
+        $.ajax({
+            async    : true,
+            cache    : true,
+            data     : {
+                'recordId' : recordId
+            },
+            dataType : 'json',
+            encode   : true,
+            headers  : {
+                'X-CSRF-TOKEN' : '{{ csrf_token() }}'
+            },
+            type     : 'post',
+            url      : 'departments/fetch'
+        }).done( function( data, status, xhr ) {
+            try {
+                let jsonData = JSON.parse( xhr.responseText ),
+                    jsonKeys = Object.keys( jsonData );
+
+                // Reset previous form contents
+                resetForm();
+
+                // Indicate the ID of the record being edited
+                recordIdField.val( recordId );
+
+                // Iterate through elements & assign the values
+                jsonKeys.forEach( function( keyName ) {
+                    let selector = $( '#' + keyName );
+                    $( selector ).val( jsonData[keyName] ).trigger( 'change' );
+                });
+
+                // Change the title
+                inputModal.find( '.modal-title' ).find( 'span' ).html( 'Edit Departments' );
+
+                // :)
+                inputModal.modal( 'show' );
+            } catch( errorException ) {
+                showErrorModal( 'Request succeeded but an unspecified error occurred.' );
+            }
+        }).fail( function( xhr, status, error ) {
+            try {
+                let jsonData = JSON.parse( xhr.responseText );
+
+                if( typeof( jsonData.ajaxFailure ) === 'string' ) {
+                    showErrorModal( jsonData.ajaxFailure );
+                } else {
+                    showErrorModal( 'Request failed. Server sent an unknown response.' );
+                }
+            } catch( errorException ) {
+                showErrorModal( 'Request failed. Unable to parse server response.' );
+            }
+        });
+    }
+
+
+</script>
+<script defer src="/css/adminlte/2.3.8/js/app.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.1/fullcalendar.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<!-- <script>
+    $( '#errorMessage' ).delay( 30000 ).fadeOut( 'slow' );
+    $( '#successMessage' ).delay( 30000 ).fadeOut( 'slow' );
+</script> -->
+</body>
+</html>
