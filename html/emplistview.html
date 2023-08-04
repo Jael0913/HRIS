@@ -170,187 +170,50 @@
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
-                Employee List
+                Employee Leave Details
             </h1>
         </section>
         <section class="content" role="main">
             <h2 class="sr-only">PAGE CONTENT</h2>
-<div class="row">
+        <div>
+        </div>
+    <div class="row">
     <div class="col-md-12">
         <div class="box box-purple flat">
             <div class="box-body">
-                <div class="box-header with-border">
-                    <div class="row">
-                        <div class="col-xs-11">
-                            <h3 class="box-title">
-                                <i class="fa fa-file-text-o"> Enter Details</i>
-                            </h3>
-                        </div>
-                            <div class="col-xs-1">
-                                <button class="btn btn-danger btn-flat pull-right" id="submitButton">RESET</button>
-                            </div>
-                    </div>
-                </div>  
+                    <div class="box-header with-border">
                         <div class="row">
-                            <br>
-                            <div class="col-xs-8">
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <input class="form-control" placeholder="EMPLOYEE FIRST NAME" type="text">
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <input class="form-control" placeholder="EMPLOYEE LAST NAME" type="text">
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <h5>OR:</h5>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-xs-7">
-                                            <input class="form-control" placeholder="PLM EMAIL" type="text"><br>
-                                        </div>
-                                        <div class="col-xs">
-                                            <button class="btn btn-warning btn-flat action-button" onclick=""><i class="fa fa-search"></i></button>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col-xs-1">
-                                <button class="btn btn-warning btn-flat action-button" onclick=""><i class="fa fa-search"></i></button>
+                            <div class="col-xs-12">
+                                <button class="btn btn-danger btn-flat pull-right" id="submitButton">EXCLUDE</button>
                             </div>
                         </div>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover table-striped" id="departmentsTable">
-                        <thead>
-                            <tr>
-                                <th class="header-search">
-                                    <input class="form-control" placeholder="EMPLOYEE NUMBER" readonly="" type="text">
-                                </th>
-                                <th class="header-search">
-                                    <input class="form-control" placeholder="FIRST NAME"  readonly="" type="text">
-                                </th>
-                                <th class="header-search">
-                                    <input class="form-control" placeholder="LAST NAME" readonly="" type="text">
-                                </th>
-                                <th class="header-search">
-                                    <input class="form-control" placeholder="VIEW LEAVES" readonly="" type="text">
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center text-nowrap">202011963</td>
-                                <td class="text-center text-nowrap">JUSTINE LOUIS</td>
-                                <td class="text-center text-nowrap">MAGPANTAY</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202044614</td>
-                                <td class="text-center text-nowrap">JOHN CHRISTOPHER</td>
-                                <td class="text-center text-nowrap">ILACAD</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202010556</td>
-                                <td class="text-center text-nowrap">BEATRICE</td>
-                                <td class="text-center text-nowrap">ESCOTO</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202010447</td>
-                                <td class="text-center text-nowrap">JOSHUA CALEB</td>
-                                <td class="text-center text-nowrap">BOLITO</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202009562</td>
-                                <td class="text-center text-nowrap">PATRICK</td>
-                                <td class="text-center text-nowrap">BUYAIN</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202044582</td>
-                                <td class="text-center text-nowrap">ACEMON JASSENNE</td>
-                                <td class="text-center text-nowrap">LADINES</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202000123</td>
-                                <td class="text-center text-nowrap">MAURICE</td>
-                                <td class="text-center text-nowrap">ANTONIO</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202012546</td>
-                                <td class="text-center text-nowrap">HARRY CHRIS JOHN</td>
-                                <td class="text-center text-nowrap">DECAPIA</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202009947</td>
-                                <td class="text-center text-nowrap">RICK ARMAND</td>
-                                <td class="text-center text-nowrap">DE LEON</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202101256</td>
-                                <td class="text-center text-nowrap">FROILAN</td>
-                                <td class="text-center text-nowrap">ALEGRIA</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202101256</td>
-                                <td class="text-center text-nowrap">FROILAN</td>
-                                <td class="text-center text-nowrap">ALEGRIA</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202101256</td>
-                                <td class="text-center text-nowrap">FROILAN</td>
-                                <td class="text-center text-nowrap">ALEGRIA</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center text-nowrap">202101256</td>
-                                <td class="text-center text-nowrap">FROILAN</td>
-                                <td class="text-center text-nowrap">ALEGRIA</td>
-                                <td class="text-center text-nowrap action-column-2">
-                                <a href="emplistview.html"><button class="btn btn-warning btn-flat action-button"><i class="fa fa-eye"></i></button></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    </div>  
+                    <div class="row">
+                        <br><br>
+                        <div class="col-xs-12">
+                            <i class="fa fa-user fa-lg"> Employee Name:</i><hr><br>
+                            <i class="fa fa-at fa-lg"> PLM Email:</i><hr><br>
+                            <i class="fa fa-calendar fa-lg"> Vacation Leave:</i><hr><br>
+                            <i class="fa fa-calendar fa-lg"> Sick Leave:</i><hr><br>
+                            <i class="fa fa-calendar fa-lg"> Forced Leave:</i><hr><br>
+                            <i class="fa fa-calendar-minus-o fa-lg"> Number of Days on Leave Without Pay:</i><hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <a href="emplist.html"><button class="btn btn-warning btn-flat">BACK</button></a>
+                        </div>
+                        <div class="col-xs-7">
+                            <button class="btn btn-primary btn-flat"  data-toggle="modal" data-target="#inputModal">UPDATE</button>
+                        </div>
+                        <br><br><br>
+                    </div>
                 </div>
             </div>
-             </div>
         </div>
     </div>
-</div>
-        </section>
     </div>
+    </section>
     <footer class="main-footer">
         <strong>Pamantasan ng Lungsod ng Maynila</strong>
         <div class="pull-right hidden-xs">
@@ -369,7 +232,7 @@
                 </h5>
             </div>
             <div class="modal-body">
-                <h4>This will reset the Annual Forced Leave and deduct the remaining to Vacation Leave, do you wish to continue?</h4>
+                <h4>This will exclude this employee for Vacation Leave Deduction, do you wish to continue?</h4>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-success flat" id="cfnModalYesBtn" type="button"><i class="fa fa-check"></i> Yes</button>
@@ -380,11 +243,95 @@
 </div>
 <!-- Confirmation Modal End -->
 
+<!-- Input Modal Start -->
+<div id="formContainer" role="form">
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="inputModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-purple">
+                    <h5 class="modal-title">
+                        <i class ="fa fa-plus"></i> <span>Edit Leave Details</span>
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <form id="departmentsForm" name="departmentsForm">
+                        <input name="_token" type="hidden">
+                        <input id="recordId" name="recordId" type="hidden">
+                        <fieldset class="form-group">
+                            <label>Leaves</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <small class="text-muted"><i class="fa fa-asterisk text-green"></i> Vacation Leave</small>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                        <input class="form-control input-group" maxlength="16" name="vacationleave" required="" type="text">
+                                    </div>
+                                    <div id="departmentCodeErrorMsg" class="hidden">
+                                        <i class="fa fa-warning text-danger"></i>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <small class="text-muted"><i class="fa fa-asterisk text-green"></i> Sick Leave</small>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                        <input class="form-control input-group" maxlength="256" name="sickleave" required="" type="text">
+                                    </div>
+                                    <div id="departmentNameErrorMsg" class="hidden">
+                                        <i class="fa fa-warning text-danger"></i>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Leaves</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <small class="text-muted"><i class="fa fa-asterisk text-green"></i> Forced Leave</small>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                        <input class="form-control input-group" maxlength="16" name="forcedleave" required="" type="text">
+                                    </div>
+                                    <div id="departmentCodeErrorMsg" class="hidden">
+                                        <i class="fa fa-warning text-danger"></i>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <small class="text-muted"><i class="fa fa-asterisk text-green"></i> Number of Days on Leave Without Pay</small>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                        <input class="form-control input-group" maxlength="256" name="leavewopay" required="" type="text">
+                                    </div>
+                                    <div id="departmentNameErrorMsg" class="hidden">
+                                        <i class="fa fa-warning text-danger"></i>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button aria-label="Submit" class="btn btn-success flat pull-right" id="submitButton" type="button"><i class="fa fa-save"></i> Save Record</button>
+                    <button aria-label="Close" class="btn btn-default flat pull-right" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="/css/jquery/3.1.1/js/jquery.min.js"></script>
 <script defer src="/css/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/css/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
 <script defer src="/css/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
 <script defer src="/css/select2/4.0.3/js/select2.min.js"></script>
+<script>
+    $('#updateModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+    });
+</script>
 <script>
     /* Global Variables Section */
     let departmentsTable  = $( '#departmentsTable' ),
@@ -409,19 +356,8 @@
         departmentType    = $( '#departmentType' ),
         isActive          = $( '#isActive' );
 
+    /* Page Specific Scripts */
     $( document ).ready( function() {
-
-        departmentsTable = departmentsTable.DataTable({
-            columns    : [
-
-                { orderable : false },
-                { orderable : false },
-                { orderable : false },
-                { orderable : false }
-            ],
-            paging     : true,
-            pagingType : 'simple_numbers'
-        });
 
         submitButton.click( function() {
             confirmationModal.modal( 'show' );
@@ -436,6 +372,7 @@
         // Initialize DataTable
         departmentsTable = departmentsTable.DataTable({
             columns    : [
+                { orderable : false },
                 { orderable : true },
                 { orderable : true },
                 { orderable : true },
@@ -443,7 +380,7 @@
                 { orderable : false }
             ],
             info       : true,
-            order      : [['1', 'asc']],
+            order      : [['2', 'asc']],
             paging     : true,
             pagingType : 'simple_numbers'
         });
@@ -489,7 +426,7 @@
         resetButton.click( function() {
             resetForm();
         });
-        
+
         submitButton.click( function() {
             savePersonnelInfo();
         });
@@ -685,7 +622,8 @@
             }
         });
     }
-
+    
+    
 
 </script>
 <script defer src="/css/adminlte/2.3.8/js/app.min.js"></script>
