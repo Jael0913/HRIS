@@ -90,23 +90,17 @@
                     <a href="#"><i class="fa fa-book text-red"></i> <span class="text-red">My Attendance</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                 </li>
                 <li class="header">HRIS MODULES</li>
-                <!-- @can( 'accessPersonnelManagement', session( 'activeUser' ) ) -->
                 <li class="treeview @yield( 'personnelManagementMenu' )">
                     <a href="#"><i class="fa fa-users "></i> <span>Personnel Management</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                     <ul class="treeview-menu">
-                        <!-- @can( 'addNewPersonnel', session( 'activeUser' ) ) -->
                         <li class="@yield( 'pmAddNewPersonnel' )">
                             <a href="personnel/add"><i class="fa fa-circle-o"></i> Add New Employee</a>
                         </li>
-                        <!-- @endcan -->
-                        <!-- @can( 'viewPersonnelList', session( 'activeUser' ) ) -->
                         <li class="@yield( 'pmViewPersonnelList' )">
                             <a href="personnel/list"><i class="fa fa-circle-o"></i> View Employee List</a>
                         </li>
-                        <!-- @endcan -->
                     </ul>
                 </li>
-                <!-- @endcan -->
                 <li class="treeview @yield( 'myLeavesMenu' )">
                     <a href="#"><i class="fa fa-calendar-check-o"></i>Leaves</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                     <ul class="treeview-menu">
@@ -124,19 +118,17 @@
                 <li class="treeview @yield( 'talentAcquisitionMenu' )">
                     <a href="#"><i class="fa fa-user-plus text-red"></i> <span class="text-red">Talent Acquisition</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                 </li>
-                <!-- @can( 'accessTimeKeeping', session( 'activeUser' ) ) -->
                 <li class="treeview @yield( 'timeKeepingMenu' )">
                     <a href="#"><i class="fa fa-clock-o"></i> <span>Time Keeping</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                     <ul class="treeview-menu">
                         <li class="@yield( 'tkComputeDtr' )">
-                            <a href="https://dtr.icto.local/"> <!----><i class="fa fa-circle-o"></i> Compute Daily Time Record</a>
+                            <a href="https://dtr.icto.local/"> <i class="fa fa-circle-o"></i> Compute Daily Time Record</a>
                         </li>
                         <li class="@yield( 'tkPrintDtr' )">
-                            <a href="timekeeping/dtr/print"><!----><i class="fa fa-circle-o"></i> Print Daily Time Record</a>
+                            <a href="timekeeping/dtr/print"><i class="fa fa-circle-o"></i> Print Daily Time Record</a>
                         </li>
                     </ul>
                 </li>
-                <!-- @endcan -->
                 <li class="treeview @yield( 'payrollGenerationMenu' )">
                     <a href="#"><i class="fa fa-money text-red"></i> <span class="text-red">Payroll Generation</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                 </li>
@@ -175,31 +167,31 @@
         </section>
         <section class="content" role="main">
             <h2 class="sr-only">PAGE CONTENT</h2>
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-purple flat">
-            <div class="box-body">
-                <div class="box-header with-border">
-                    <div class="row">
-                        <div class="col-xs-10">
-                            <h3 class="box-title">
-                                <i class="fa fa-file-text-o"> Enter Details</i>
-                            </h3>
-                        </div>
-                        <div class="col-xs-1">
-                            <button class="btn btn-primary btn-flat pull-right" data-toggle="modal" data-target="#accumsModal">ADD ACCUMULATION</button>
-                        </div>
-                        <div class="col-xs-1">
-                            <button class="btn btn-danger btn-flat pull-right" id="submitButton">RESET</button>
-                        </div>
-                    </div>
-                </div>  
-                        <div class="row">
-                            <br>
-                            <div class="col-xs-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-purple flat">
+                            <div class="box-body">
+                                <div class="box-header with-border">
                                     <div class="row">
-                                        <div class="col-xs-6">
-                                            <input class="form-control" placeholder="EMPLOYEE FIRST NAME" type="text">
+                                    <div class="col-xs-10">
+                                    <h3 class="box-title">
+                                        <i class="fa fa-file-text-o"></i> Enter Details
+                                    </h3>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <button class="btn btn-primary btn-flat pull-right" data-toggle="modal" data-target="#accumsModal">ADD ACCUMULATION</button>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <button class="btn btn-danger btn-flat pull-right" id="submitButton">RESET</button>
+                                    </div>
+                                </div>
+                                </div>
+                    <div class="row">
+                        <br>
+                        <div class="col-xs-8">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input class="form-control" placeholder="EMPLOYEE FIRST NAME" type="text">
                                         </div>
                                         <div class="col-xs-6">
                                             <input class="form-control" placeholder="EMPLOYEE LAST NAME" type="text">
@@ -347,11 +339,8 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-             </div>
-        </div>
-    </div>
-</div>
+                </div>
+                </div>
         </section>
     </div>
     <footer class="main-footer">
@@ -408,7 +397,7 @@
 <script defer src="/css/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/css/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
 <script defer src="/css/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
-<script defer src="/css/select2/4.0.3/js/select2.min.js"></script>+
+<script defer src="/css/select2/4.0.3/js/select2.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#accumsModal').on('show.bs.modal', function (event) {
@@ -455,22 +444,6 @@ $( document ).ready( function() {
         departmentHead    = $( '#departmentHead' ),
         departmentType    = $( '#departmentType' ),
         isActive          = $( '#isActive' );
-
-    $( document ).ready( function() {
-
-        departmentsTable = departmentsTable.DataTable({
-            columns    : [
-
-                { orderable : false },
-                { orderable : false },
-                { orderable : false },
-                { orderable : false }
-            ],
-            paging     : true,
-            pagingType : 'simple_numbers'
-        });
-
-    });
 
     $( document ).ready( function() {
         // Initialize DataTable
